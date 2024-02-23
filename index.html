@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Henrique Goncalves" />
+	<meta name="description" content="A pizzeria page with a form to submit an order." />
+    <!-- fonts import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- end of fonts import -->
+    <title>Pizza Palace</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+</head>
+
+<body>
+    <!--Page Header-->
+    <header>
+        <!--logo-->
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="logo" height="100px"></img>
+                </a>
+            </div>
+            <!--navigation menu-->
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#scroll-to-top">Home</a></li>
+                    <li><a href="#scroll-to-special">Special Pizza</a></li>
+                    <li><a href="#scroll-to-about">About Us</a></li>
+                    <li><a href="#scroll-to-form">Order Now</a></li>
+                </ul>
+            </nav>
+            <!--header button-->
+            <div class="btn-order">
+                <a href="#scroll-to-form">
+                    <button>Order Now!</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!--Page Main-->
+    <main>
+        
+        <!--site top-->
+        <section id="scroll-to-top"  class="site-top">
+            <div class="interface">
+                <div class="flex">
+
+                    <!--text site top-->
+                    <div class="txt-site-top">
+                        <h1>WELCOME TO PIZZA PALACE<span>.</span></h1>
+                        <p>The most delicious pizza in the world.</p>
+
+                        <!--site top button-->
+                        <div class="btn-order">
+                            <a href="#scroll-to-form">
+                                <button>ORDER NOW!</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--animated pizza floating-->
+                    <div class="img-site-top">
+                        <img src="images/pizzafloating.png" alt="A pizza floating." height="200px"></img>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Special Ingredients-->
+        <section  id="scroll-to-special" class="special-ingredients">
+            <div class="interface">
+                <h2 class="sub-title">SPECIAL <span>INGREDIENTS</span></h2>
+
+                <!-- special ingredients box-->
+                <div class="flex">
+
+                    <!--Cheese-->
+                    <div class="special-ingredients-box">
+                            <img src="images/cheese.png" alt="cheese image" height="100px"></img>
+                            <h3>ITALIAN CHEESE</h3>
+                            <p>Try our world famous <strong><em>Italian</em></strong> Cheese.</p>
+                    </div>
+
+                    <!--Mushroom-->
+                    <div class="special-ingredients-box">
+                        
+                            <img src="images/mushroom.png" alt="mushroom image" height="100px"></img>
+                            <h3>IN HOUSE MUSHROOM</h3>
+                            <p>In house cultivated mushroom for a unique flavour.</p>
+                    </div>
+
+                    <!--Pepperoni-->
+                    <div class="special-ingredients-box">
+                            <img src="images/pepperoni.png" alt="pepperoni pizza slice" height="100px"></img>
+                            <h3>PEPPERONI</h3>
+                            <p>Perfect cut pepperoni.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--About Us-->
+        <section id="scroll-to-about" class="about">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-about">
+                        <img src="images/eating.png" alt="people sharing a pizza"></img>
+                    </div>
+                    <div class="txt-about">
+                        <h2>WE ARE <span>PIZZA PALACE.</span></h2>
+                        <p>
+                            Our journey began with a simple goal to create the perfect pizza using only the finest, freshest ingredients.
+                            With skilled artisans in our kitchen, we craft each pizza with <em>precision and dedication</em>, ensuring a symphony of flavors
+                            that dance on your taste buds. From our <strong>hand-tossed crust</strong> to our rich and savory sauces, every element is a testament to our
+                            love for the art of pizza-making.
+                        </p>
+                         <p>
+                            Step into <strong>Pizza Palace</strong>, and you'll find a warm and inviting atmosphere where friends and families come together to share not just a meal,
+                            but moments of <em>joy and connection</em>.
+                        </p>
+                     </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--Order Form-->
+        <section id="scroll-to-form" class="form">
+
+            <div class="interface">
+                      
+                <!--Pizza Order Form with html validation-->
+                <!--The form will be submitted to confirmation.html-->
+                <form action="confirmation.html" method="post">
+                    <h2>ORDER <span>NOW!</span></h2>
+                    <h3><span>Red fields</span> are required.</h3>
+                    
+                    <!--Personal Information Section-->
+                    <div class="personal-info">
+                        <fieldset>
+                            <legend >Your Information</legend>
+                            <label for="customerName">Name:</label>
+                            <input type="text" id="customerName" name="customerName" placeholder="Your name here!" required />
+                            <br>
+
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}" /><!--pattern indicated by placeholder-->
+                            <br>
+
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" name="address" placeholder="123 Main St" required />
+                            <br>
+
+                            <label for="cityName">City:</label>
+                            <input type="text" id="cityName" name="cityName" placeholder="Toronto" required />
+                            <br>
+
+                           
+                        </fieldset>
+                    </div>
+
+                    <!--Pizza Details Section-->
+                    <div class="pizza-details">
+                        <fieldset>
+                            <legend>Pizza Details</legend>
+                            <label for="numberOfPizzas">Number of Pizzas:</label>
+                            <input type="number" id="numberOfPizzas" name="numberOfPizzas" min="1" max="99" value="1" required />
+                            <br>
+
+                            <!--Pizza Size-->
+                            <label for="pizzaSize">Size:</label>
+                            <select id="pizzaSize" name="pizzaSize" required>
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                            <br>
+
+                            <!--Pizza Shape-->
+                            <label>Shape:</label><br>
+                            <input type="radio" id="roundPizza" name="pizzaShape" value="round" checked>
+                            <label for="roundPizza">Round</label><br>
+                            <input type="radio" id="squarePizza" name="pizzaShape" value="square" />
+                            <label for="squarePizza">Square</label>
+                            <br>
+
+                            <!--Pizza Toppings-->
+                            <label for="toppings">Toppings:</label>
+                            <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni" />
+                            <label for="pepperoni">Pepperoni</label>
+                            <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms" />
+                            <label for="mushrooms">Mushrooms</label>
+                            <input type="checkbox" id="sausage" name="toppings" value="sausage" />
+                            <label for="sausage">Sausage</label>
+                            <input type="checkbox" id="pineapple" name="toppings" value="pineapple" />
+                            <label for="pineapple">Pineapple</label>
+                            <input type="checkbox" id="cheese" name="toppings" value="cheese" checked />
+                            <label for="cheese">Cheese</label>
+                            <input type="checkbox" id="veggies" name="toppings" value="veggies" />
+                            <label for="veggies">Veggies</label>
+                            <input type="checkbox" id="beef" name="toppings" value="beef" />
+                            <label for="beef">Beef</label>
+                            <input type="checkbox" id="shrimp" name="toppings" value="shrimp" />
+                            <label for="shrimp">Shrimp</label>
+                            <br>
+
+                            <!--Crust Type-->
+                            <label for="crustType">Crust Type:</label>
+                            <select id="crustType" name="crustType">
+                                <option value="deepDish">Deep Dish</option>
+                                <option value="thinCrust">Thin Crust</option>
+                                <option value="regular">Regular</option>
+                            </select>
+                            <br>
+                        </fieldset>
+                    </div>
+
+                    <!--Delivery Options Section-->
+                    <div class="delivery-options">
+                        <fieldset>
+                            <legend>Delivery Options</legend>
+                            <input type="radio" id="takeout" name="deliveryOption" value="takeout" checked />
+                            <label for="takeout">Take Out</label>
+                            <br>
+
+                            <input type="radio" id="delivery" name="deliveryOption" value="delivery" />
+                            <label for="delivery">Delivery</label>
+                            <br>
+
+                            <input type="radio" id="eatIn" name="deliveryOption" value="eatIn" />
+                            <label for="eatIn">Eat In</label>
+                            <br>
+                        </fieldset>
+                    </div>
+
+                    <!--Payment Info-->
+                    <div class="payment-info">
+                        <fieldset>
+                            
+                            <legend>Payment Information</legend>
+                            <label for="creditCardNumber">Credit Card Number:</label>
+                            <input type="text" id="creditCardNumber" name="creditCardNumber" placeholder="**** **** **** ****"  pattern="\d{4} \d{4} \d{4} \d{4}" required />
+                            <br>
+        
+                            <label for="creditCardName">Card Holder Name:</label>
+                            <input type="text" id="creditCardName" name="creditCardName" placeholder="Name in the card" required />
+                            <br>
+
+                            <label for="cardType">Card Type:</label>
+                            <select id="cardType" name="cardType" required>
+                                <option value="amex">Amex</option>
+                                <option value="mc">Master Card</option>
+                                <option value="visa">VISA</option>
+                            </select>
+                            <br>
+
+                            <label for="expirationDate">Expiration Date:</label>
+                            <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YYYY" pattern="\d{2}/\d{4}" required />
+                            <br>
+                            
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" pattern="\d{3}" required />
+                            <br>
+                        </fieldset>
+                    </div>
+
+                    <!--Additional Instructions Section-->
+                    <div class="additional-instructions">
+                        <fieldset>
+                            <legend>Additional Instructions</legend>
+                            <label for="instructions">Special Instructions:</label>
+                            <textarea id="instructions" name="instructions" placeholder="Call me when arrive!" rows="4" cols="50"></textarea>
+                        </fieldset>
+                    </div>
+
+                    <!--Submit and Reset Buttons-->
+                    <div class="form-buttons">
+                        <button type="submit" value="Place Order">Place Order</button>
+                        <button type="reset" value="Reset Form">Reset Form</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--Page Footer-->
+    <footer>
+        <div class="footer-bar">
+            <p><small>© Pizza Palace landpage with form validation using HTML and CSS.</small></p>
+		</div>
+    </footer>
+
+</body>
+</html>
